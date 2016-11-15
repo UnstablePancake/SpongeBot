@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Announcer {
 
-    public static void announcer(MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
+    public static void announcer (MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
         if (event.getMessage().getAuthor().getID().equals("164909448043823104") && event.getMessage().toString().startsWith(".announce ")) {
             String message = event.getMessage().toString().substring(10);
 

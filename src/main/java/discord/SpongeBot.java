@@ -64,10 +64,10 @@ public class SpongeBot {
             System.out.println(event.getMessage().getAuthor().getName() + ": " + event.getMessage());
 
             Announcer.announcer(event);
+            BotInfo.nameChanger(event);
             BotJoin.botJoin(event);
             Help.help(event);
             MagicConch.magicConch(event);
-            NameChanger.nameChanger(event);
             PingPong.pingPong(event);
             RPS.rps(event);
             Talk.talk(event);

@@ -7,7 +7,7 @@ import sx.blah.discord.util.RateLimitException;
 
 public class MagicConch {
 
-    public static void magicConch(MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
+    public static void magicConch (MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
         if (event.getMessage().toString().startsWith(">8ball ") && event.getMessage().toString().substring(7) != " ") {
             if ((event.getMessage().toString().substring(7).length() > 5) || event.getMessage().toString().contains("?")) {
                 String[] responses = {"It is certain", "It is decidedly so", "Without a doubt", "Yes, definitely",

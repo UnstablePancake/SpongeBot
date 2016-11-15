@@ -7,7 +7,7 @@ import sx.blah.discord.util.RateLimitException;
 
 public class VoteKick {
 
-    public static void voteKick(MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
+    public static void voteKick (MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
 
         int yes = 0, no = 0;
 
