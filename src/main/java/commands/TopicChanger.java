@@ -16,7 +16,7 @@ public class TopicChanger {
 
         if (event.getMessage().toString().startsWith("!resettopic")) {
             String id = event.getMessage().getChannel().getID();
-            event.getClient().getChannelByID(id).changeTopic("");
+            event.getClient().getChannelByID(id).changeTopic(null);
         }
     }
 }
