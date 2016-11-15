@@ -8,11 +8,17 @@ import sx.blah.discord.util.RateLimitException;
 public class Talk {
 
     public static void talk (MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
-
-        if (event.getMessage().toString().startsWith("/t")) {
-            String talkMessage = event.getMessage().toString().substring(3);
-
-            event.getClient().getChannelByID("181899302023593984").sendMessage(talkMessage);
+        String[] serverID = {
+                "181899302023593984",
+                "184887073688387584"
+        };
+        if (event.getMessage().toString().startsWith("/t0 ")) {
+            String talkMessage = event.getMessage().toString().substring(4);
+            event.getClient().getChannelByID(serverID[0]).sendMessage(talkMessage);
+        }
+        if (event.getMessage().toString().startsWith("/t1 ")) {
+            String talkMessage = event.getMessage().toString().substring(4);
+            event.getClient().getChannelByID(serverID[1]).sendMessage(talkMessage);
         }
     }
 }
