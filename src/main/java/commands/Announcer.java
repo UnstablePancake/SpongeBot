@@ -19,7 +19,7 @@ public class Announcer {
 
             System.out.println(channelString);
 
-            String channelTemp = "", messageTemp = "", mentionIDTemp = "";
+            String channelTemp = "";
 
             //Gets channel ID's
             for (int i = 0; i < channelString.length(); i++) {
