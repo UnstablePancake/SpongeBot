@@ -12,13 +12,9 @@ public class Talk {
                 "181899302023593984",
                 "184887073688387584"
         };
-        if (event.getMessage().toString().startsWith("/t0 ")) {
+        if (event.getMessage().getAuthor().getID().equals("164909448043823104") && event.getMessage().toString().length() > 4 && event.getMessage().toString().startsWith("/t")) {
             String talkMessage = event.getMessage().toString().substring(4);
-            event.getClient().getChannelByID(serverID[0]).sendMessage(talkMessage);
-        }
-        if (event.getMessage().toString().startsWith("/t1 ")) {
-            String talkMessage = event.getMessage().toString().substring(4);
-            event.getClient().getChannelByID(serverID[1]).sendMessage(talkMessage);
+            event.getClient().getChannelByID(serverID[Integer.parseInt(String.valueOf(event.getMessage().toString().charAt(2)))]).sendMessage(talkMessage);
         }
     }
 }
