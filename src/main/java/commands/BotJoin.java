@@ -10,13 +10,11 @@ public class BotJoin {
         if (event.getMessage().toString().startsWith("!join")) {
             IVoiceChannel voiceChannel = event.getMessage().getAuthor().getConnectedVoiceChannels().get(0);
             voiceChannel.join();
-            System.out.println("*Joined " + voiceChannel);
         }
 
         if (event.getMessage().toString().startsWith("!leave")) {
             IVoiceChannel voiceChannel = event.getClient().getUserByID("239839092836139009").getConnectedVoiceChannels().get(0);
             voiceChannel.leave();
-            System.out.println("*Left " + voiceChannel);
         }
     }
 }
