@@ -67,6 +67,7 @@ public class SpongeBot {
             BotInfo.botInfoChanger(event);
             BotJoin.botJoin(event);
             Help.help(event);
+            Joke.jokeOut(event);
             MagicConch.magicConch(event);
             PingPong.pingPong(event);
             RPS.rps(event);
