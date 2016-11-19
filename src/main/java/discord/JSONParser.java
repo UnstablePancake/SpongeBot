@@ -29,6 +29,5 @@ public class JSONParser {
                 ex.printStackTrace();
             }
         }
-        JSONObject obj = new JSONObject(jsonData);
     }
 }
