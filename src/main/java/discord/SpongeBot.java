@@ -68,6 +68,7 @@ public class SpongeBot {
             BotJoin.botJoin(event);
             Help.help(event);
             Joke.jokeOut(event);
+            Luck.testLuck(event);
             MagicConch.magicConch(event);
             PingPong.pingPong(event);
             RPS.rps(event);
@@ -75,6 +76,7 @@ public class SpongeBot {
             Test.test(event);
             TopicChanger.topicChanger(event);
             VoteKick.voteKick(event);
+
         }
     }
 }
