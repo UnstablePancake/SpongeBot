@@ -23,4 +23,16 @@ public class Luck {
             }
         }
     }
+
+    public static void coinFlip(MessageReceivedEvent event) throws RateLimitException, DiscordException, MissingPermissionsException {
+        if (event.getMessage().toString().startsWith(">coinflip")){
+            int random = (int)(Math.random() * 100);
+            if (random < 50){
+                event.getMessage().getChannel().sendMessage(event.getMessage().getAuthor().mention() + " Heads");
+            }
+            else {
+                event.getMessage().getChannel().sendMessage(event.getMessage().getAuthor().mention() + " Tails");
+            }
+        }
+    }
 }
